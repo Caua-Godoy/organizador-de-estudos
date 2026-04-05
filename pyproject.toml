@@ -1,0 +1,26 @@
+[project]
+name = "study-task-organizer"
+version = "1.0.0"
+description = "organizador de tarefas de estudo via CLI"
+authors = [
+    {name = "Caua"}
+]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.4.0"
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

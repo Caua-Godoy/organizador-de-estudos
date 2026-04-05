@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: set up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: rodar lint (ruff)
+        run: ruff check src/
+
+      - name: rodar testes
+        run: pytest
