@@ -1,6 +1,6 @@
-# 📚 study-task-organizer
+# 📚 organizador de tarefas
 
-![CI](https://github.com/SEU_USUARIO/study-task-organizer/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/Caua-Godoy/study-task-organizer/actions/workflows/ci.yml/badge.svg)
 
 Organizador de tarefas de estudo via linha de comando (CLI). O programa ajuda estudantes a gerenciar atividades escolares/universitarias, organizando por materia e prazo, sem depender de apps externos ou internet.
 
@@ -10,9 +10,6 @@ Organizador de tarefas de estudo via linha de comando (CLI). O programa ajuda es
 
 Estudantes frequentemente perdem prazos de trabalhos, provas e atividades por falta de organizacao. Cadernos e anotacoes avulsas se perdem facilmente, e muitos apps de produtividade sao complexos ou exigem cadastro. Esta ferramenta resolve isso de forma simples, rodando direto no terminal.
 
-## 👥 Publico-alvo
-
-Estudantes do ensino medio e superior com dificuldade de manter uma rotina de estudos organizada.
 
 ## ✅ Funcionalidades
 
@@ -23,21 +20,13 @@ Estudantes do ensino medio e superior com dificuldade de manter uma rotina de es
 - Remover tarefa
 - Persistencia local em arquivo JSON
 
-## 🛠️ Tecnologias
-
-- Python 3.9+
-- pytest (testes)
-- ruff (lint)
-- GitHub Actions (CI)
-
----
 
 ## 🚀 Instalacao
 
 **1. Clone o repositorio:**
 ```bash
-git clone https://github.com/SEU_USUARIO/study-task-organizer.git
-cd study-task-organizer
+git clone https://github.com/Caua-Godoy/organizador-de-estudos.git
+cd organizador-de-estudos
 ```
 
 **2. (Opcional) Crie um ambiente virtual:**
@@ -121,8 +110,11 @@ ruff check src/
 
 ## 👤 Autor
 
-Caua
+Caua Godoy
 
 ## 🔗 Repositorio
 
-https://github.com/SEU_USUARIO/study-task-organizer
+https://github.com/Caua-Godoy/organizador-de-estudos
+
+
+### README COM AUXILIO DE IA
