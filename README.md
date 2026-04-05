@@ -1,6 +1,6 @@
 # 📚 organizador de tarefas
 
-![CI](https://github.com/Caua-Godoy/study-task-organizer/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/Caua-Godoy/organizador-de-estudos/actions/workflows/ci.yml/badge.svg)
 
 Organizador de tarefas de estudo via linha de comando (CLI). O programa ajuda estudantes a gerenciar atividades escolares/universitarias, organizando por materia e prazo, sem depender de apps externos ou internet.
 
