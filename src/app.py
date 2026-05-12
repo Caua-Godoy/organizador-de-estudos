@@ -1,6 +1,7 @@
 import json
 import os
 from datetime import datetime
+from src.feriados import eh_feriado, listar_feriados_cli
 
 DATA_FILE = "tasks.json"
 
@@ -30,7 +31,7 @@ def add_task(title, subject, deadline=None):
         "subject": subject.strip(),
         "deadline": deadline,
         "done": False,
-        "created_at": datetime.now().strftime("%Y-%m-%d %H:%M")
+        "created_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
     }
     tasks.append(task)
     save_tasks(tasks)
@@ -75,7 +76,7 @@ def print_tasks(tasks):
 
 def main():
     print("=== organizador de tarefas de estudo ===")
-    print("comandos: add, list, done, remove, all, sair")
+    print("comandos: add, list, done, remove, all, feriados, sair")
 
     while True:
         cmd = input("\n> ").strip().lower()
@@ -91,6 +92,10 @@ def main():
             try:
                 task = add_task(title, subject, deadline)
                 print(f"tarefa #{task['id']} adicionada!")
+                if deadline:
+                    nome_feriado = eh_feriado(deadline)
+                    if nome_feriado:
+                        print(f"⚠️  atencao: {deadline} e feriado nacional ({nome_feriado})!")
             except ValueError as e:
                 print(f"erro: {e}")
 
@@ -124,6 +129,9 @@ def main():
                     print("tarefa nao encontrada.")
             except ValueError:
                 print("id invalido.")
+
+        elif cmd == "feriados":
+            listar_feriados_cli()
 
         else:
             print("comando nao reconhecido.")
